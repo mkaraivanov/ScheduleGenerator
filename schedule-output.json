@@ -1,0 +1,81 @@
+{
+  "tournamentName": "Quick Test Tournament",
+  "matches": [
+    {
+      "matchId": -254553341,
+      "homeTeam": "97d3d394-f42d-4472-83dc-d34f2ae361c1",
+      "awayTeam": "b0bd53d9-e4ab-4cd9-967c-7f74d9a5c2d2",
+      "field": "4152c118-3b90-41a7-a926-ccfff481c276",
+      "startTime": "2026-06-20T09:00:00",
+      "endTime": "2026-06-20T10:00:00",
+      "stage": "RoundRobin",
+      "group": null,
+      "round": 1
+    },
+    {
+      "matchId": -356735340,
+      "homeTeam": "345d3060-b00a-4887-a9e1-b4570e40f476",
+      "awayTeam": "2eccfb1f-6faf-4411-bd9b-9f174b219688",
+      "field": "4152c118-3b90-41a7-a926-ccfff481c276",
+      "startTime": "2026-06-20T10:10:00",
+      "endTime": "2026-06-20T11:10:00",
+      "stage": "RoundRobin",
+      "group": null,
+      "round": 1
+    },
+    {
+      "matchId": -1296307311,
+      "homeTeam": "97d3d394-f42d-4472-83dc-d34f2ae361c1",
+      "awayTeam": "345d3060-b00a-4887-a9e1-b4570e40f476",
+      "field": "4152c118-3b90-41a7-a926-ccfff481c276",
+      "startTime": "2026-06-20T11:20:00",
+      "endTime": "2026-06-20T12:20:00",
+      "stage": "RoundRobin",
+      "group": null,
+      "round": 2
+    },
+    {
+      "matchId": -640325068,
+      "homeTeam": "2eccfb1f-6faf-4411-bd9b-9f174b219688",
+      "awayTeam": "b0bd53d9-e4ab-4cd9-967c-7f74d9a5c2d2",
+      "field": "4152c118-3b90-41a7-a926-ccfff481c276",
+      "startTime": "2026-06-20T12:30:00",
+      "endTime": "2026-06-20T13:30:00",
+      "stage": "RoundRobin",
+      "group": null,
+      "round": 2
+    },
+    {
+      "matchId": 2042813539,
+      "homeTeam": "97d3d394-f42d-4472-83dc-d34f2ae361c1",
+      "awayTeam": "2eccfb1f-6faf-4411-bd9b-9f174b219688",
+      "field": "4152c118-3b90-41a7-a926-ccfff481c276",
+      "startTime": "2026-06-20T13:40:00",
+      "endTime": "2026-06-20T14:40:00",
+      "stage": "RoundRobin",
+      "group": null,
+      "round": 3
+    },
+    {
+      "matchId": 1221921278,
+      "homeTeam": "b0bd53d9-e4ab-4cd9-967c-7f74d9a5c2d2",
+      "awayTeam": "345d3060-b00a-4887-a9e1-b4570e40f476",
+      "field": "4152c118-3b90-41a7-a926-ccfff481c276",
+      "startTime": "2026-06-20T14:50:00",
+      "endTime": "2026-06-20T15:50:00",
+      "stage": "RoundRobin",
+      "group": null,
+      "round": 3
+    }
+  ],
+  "diagnostics": {
+    "isValid": true,
+    "totalMatches": 6,
+    "hardConstraintViolations": 0,
+    "softConstraintViolations": 0,
+    "violations": [],
+    "warnings": [],
+    "generationTime": null
+  },
+  "generatedAt": "2026-02-13T19:04:32.066417Z"
+}

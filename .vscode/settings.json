@@ -1,0 +1,36 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^dotnet run --project src/ScheduleGenerator\\.Console/ScheduleGenerator\\.Console\\.csproj$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^dotnet build$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^dotnet build && dotnet test --no-build$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^dotnet test --no-build$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^dotnet build tests/ScheduleGenerator\\.Application\\.Tests$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd src/ScheduleGenerator\\.Console && dotnet add package System\\.CommandLine --version 2\\.0\\.0-beta4\\.22272\\.1$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd src/ScheduleGenerator\\.Console && dotnet add package Microsoft\\.Extensions\\.Hosting && dotnet add package Serilog\\.Extensions\\.Hosting && dotnet add package Serilog\\.Sinks\\.Console$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^dotnet add src/ScheduleGenerator\\.Console/ScheduleGenerator\\.Console\\.csproj package Microsoft\\.Extensions\\.Hosting && dotnet add src/ScheduleGenerator\\.Console/ScheduleGenerator\\.Console\\.csproj package Serilog\\.Extensions\\.Hosting && dotnet add src/ScheduleGenerator\\.Console/ScheduleGenerator\\.Console\\.csproj package Serilog\\.Sinks\\.Console$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

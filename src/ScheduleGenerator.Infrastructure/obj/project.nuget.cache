@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "E0RzLQ6r5mo=",
+  "success": true,
+  "projectFilePath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/ScheduleGenerator.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/Users/martin.karaivanov/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
+    "/Users/martin.karaivanov/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0/microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+    "/Users/martin.karaivanov/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0/microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

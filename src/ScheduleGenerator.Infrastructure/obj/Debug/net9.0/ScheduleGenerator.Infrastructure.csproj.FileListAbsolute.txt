@@ -1,0 +1,17 @@
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/Debug/net9.0/ScheduleGenerator.Infrastructure.csproj.AssemblyReference.cache
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/Debug/net9.0/ScheduleGenerator.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/Debug/net9.0/ScheduleGenerator.Infrastructure.AssemblyInfoInputs.cache
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/Debug/net9.0/ScheduleGenerator.Infrastructure.AssemblyInfo.cs
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/Debug/net9.0/ScheduleGenerator.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/bin/Debug/net9.0/ScheduleGenerator.Infrastructure.deps.json
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/bin/Debug/net9.0/ScheduleGenerator.Infrastructure.dll
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/bin/Debug/net9.0/ScheduleGenerator.Infrastructure.pdb
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/bin/Debug/net9.0/ScheduleGenerator.Application.dll
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/bin/Debug/net9.0/ScheduleGenerator.Domain.dll
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/bin/Debug/net9.0/ScheduleGenerator.Application.pdb
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/bin/Debug/net9.0/ScheduleGenerator.Domain.pdb
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/Debug/net9.0/Schedule.B2F17CDD.Up2Date
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/Debug/net9.0/ScheduleGenerator.Infrastructure.dll
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/Debug/net9.0/refint/ScheduleGenerator.Infrastructure.dll
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/Debug/net9.0/ScheduleGenerator.Infrastructure.pdb
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/Debug/net9.0/ref/ScheduleGenerator.Infrastructure.dll

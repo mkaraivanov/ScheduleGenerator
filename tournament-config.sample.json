@@ -1,0 +1,79 @@
+{
+  // Sample tournament configuration for Schedule Generator
+  // This file demonstrates all available options for defining a tournament
+  
+  "name": "Summer Soccer Tournament 2026",
+  
+  "teams": [
+    { "name": "Team Alpha", "seed": 1 },
+    { "name": "Team Beta", "seed": 2 },
+    { "name": "Team Gamma", "seed": 3 },
+    { "name": "Team Delta", "seed": 4 },
+    { "name": "Team Epsilon" },
+    { "name": "Team Zeta" },
+    { "name": "Team Eta" },
+    { "name": "Team Theta" }
+  ],
+  
+  "fields": [
+    {
+      "name": "Field 1",
+      "availabilityWindows": [
+        {
+          "start": "2026-06-15T09:00:00",
+          "end": "2026-06-15T18:00:00"
+        },
+        {
+          "start": "2026-06-16T09:00:00",
+          "end": "2026-06-16T18:00:00"
+        }
+      ]
+    },
+    {
+      "name": "Field 2",
+      "availabilityWindows": [
+        {
+          "start": "2026-06-15T10:00:00",
+          "end": "2026-06-15T17:00:00"
+        },
+        {
+          "start": "2026-06-16T10:00:00",
+          "end": "2026-06-16T17:00:00"
+        }
+      ]
+    }
+  ],
+  
+  "format": {
+    "type": "RoundRobin"
+    // For group stage tournaments, use:
+    // "type": "Groups",
+    // "groupStage": {
+    //   "numberOfGroups": 2,
+    //   "teamsAdvancingPerGroup": 2,
+    //   "advancement": {
+    //     "nextStage": "Knockout",
+    //     "teamsAdvancing": 4
+    //   }
+    // }
+    // For knockout with third place:
+    // "knockout": {
+    //   "includeThirdPlaceMatch": true
+    // }
+  },
+  
+  "rules": {
+    "matchDurationMinutes": 90,
+    "bufferBetweenMatchesMinutes": 15,
+    "minimumRestTimeMinutes": 60,
+    "maxMatchesPerTeamPerDay": 2,
+    "minimumOpponentSpacingMinutes": 180
+  },
+  
+  "constraints": {
+    "balancedKickoffTimesWeight": 2,
+    "minimizeFieldChangesWeight": 1,
+    "opponentSpacingWeight": 3,
+    "seededTeamSeparationWeight": 2
+  }
+}

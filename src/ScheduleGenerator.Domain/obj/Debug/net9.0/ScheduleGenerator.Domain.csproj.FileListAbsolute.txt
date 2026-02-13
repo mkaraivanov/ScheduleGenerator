@@ -1,0 +1,11 @@
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/bin/Debug/net9.0/ScheduleGenerator.Domain.deps.json
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/bin/Debug/net9.0/ScheduleGenerator.Domain.dll
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/bin/Debug/net9.0/ScheduleGenerator.Domain.pdb
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.AssemblyInfoInputs.cache
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.AssemblyInfo.cs
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.csproj.CoreCompileInputs.cache
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.dll
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/refint/ScheduleGenerator.Domain.dll
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.pdb
+/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ref/ScheduleGenerator.Domain.dll

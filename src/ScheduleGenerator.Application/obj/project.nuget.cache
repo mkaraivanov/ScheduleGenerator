@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fj6xAtZmAW4=",
+  "success": true,
+  "projectFilePath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Application/ScheduleGenerator.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/martin.karaivanov/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

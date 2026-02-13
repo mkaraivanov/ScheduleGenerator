@@ -1,0 +1,295 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/martin.karaivanov/Projects/ScheduleGenerator/tests/ScheduleGenerator.Integration.Tests/ScheduleGenerator.Integration.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Application/ScheduleGenerator.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Application/ScheduleGenerator.Application.csproj",
+        "projectName": "ScheduleGenerator.Application",
+        "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Application/ScheduleGenerator.Application.csproj",
+        "packagesPath": "/Users/martin.karaivanov/.nuget/packages/",
+        "outputPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/martin.karaivanov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj": {
+                "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj",
+        "projectName": "ScheduleGenerator.Domain",
+        "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj",
+        "packagesPath": "/Users/martin.karaivanov/.nuget/packages/",
+        "outputPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/martin.karaivanov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/ScheduleGenerator.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/ScheduleGenerator.Infrastructure.csproj",
+        "projectName": "ScheduleGenerator.Infrastructure",
+        "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/ScheduleGenerator.Infrastructure.csproj",
+        "packagesPath": "/Users/martin.karaivanov/.nuget/packages/",
+        "outputPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/martin.karaivanov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Application/ScheduleGenerator.Application.csproj": {
+                "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Application/ScheduleGenerator.Application.csproj"
+              },
+              "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj": {
+                "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/martin.karaivanov/Projects/ScheduleGenerator/tests/ScheduleGenerator.Integration.Tests/ScheduleGenerator.Integration.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/martin.karaivanov/Projects/ScheduleGenerator/tests/ScheduleGenerator.Integration.Tests/ScheduleGenerator.Integration.Tests.csproj",
+        "projectName": "ScheduleGenerator.Integration.Tests",
+        "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/tests/ScheduleGenerator.Integration.Tests/ScheduleGenerator.Integration.Tests.csproj",
+        "packagesPath": "/Users/martin.karaivanov/.nuget/packages/",
+        "outputPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/tests/ScheduleGenerator.Integration.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/martin.karaivanov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Application/ScheduleGenerator.Application.csproj": {
+                "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Application/ScheduleGenerator.Application.csproj"
+              },
+              "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj": {
+                "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj"
+              },
+              "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/ScheduleGenerator.Infrastructure.csproj": {
+                "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Infrastructure/ScheduleGenerator.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.12.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0eA0tR9VljA=",
+  "dgSpecHash": "KYBM5lKCHbY=",
   "success": true,
-  "projectFilePath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj",
+  "projectFilePath": "/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

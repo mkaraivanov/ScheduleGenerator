@@ -9,3 +9,15 @@
 /Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/refint/ScheduleGenerator.Domain.dll
 /Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.pdb
 /Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ref/ScheduleGenerator.Domain.dll
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/bin/Debug/net9.0/ScheduleGenerator.Domain.deps.json
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/bin/Debug/net9.0/ScheduleGenerator.Domain.dll
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/bin/Debug/net9.0/ScheduleGenerator.Domain.pdb
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.AssemblyInfoInputs.cache
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.AssemblyInfo.cs
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.csproj.CoreCompileInputs.cache
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.sourcelink.json
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.dll
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/refint/ScheduleGenerator.Domain.dll
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ScheduleGenerator.Domain.pdb
+/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/obj/Debug/net9.0/ref/ScheduleGenerator.Domain.dll

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScheduleGenerator.Application\ScheduleGenerator.Application.csproj" />
+    <ProjectReference Include="..\ScheduleGenerator.Infrastructure\ScheduleGenerator.Infrastructure.csproj" />
+    <ProjectReference Include="..\ScheduleGenerator.Domain\ScheduleGenerator.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

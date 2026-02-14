@@ -1,0 +1,352 @@
+@page "/tournament-config"
+@using ScheduleGenerator.Application.Models
+@using ScheduleGenerator.Application.Services
+@using ScheduleGenerator.Application.Validators
+@using System.Text.Json
+@inject ITournamentOrchestrator Orchestrator
+@inject TournamentDefinitionValidator Validator
+@inject ILogger<TournamentConfig> Logger
+@rendermode InteractiveServer
+
+<PageTitle>Tournament Configuration</PageTitle>
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4">
+                <i class="bi bi-trophy"></i> Tournament Schedule Generator
+            </h1>
+            <p class="lead">Configure your tournament parameters and generate an optimized schedule.</p>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error:</strong> @errorMessage
+            <button type="button" class="btn-close" @onclick="() => errorMessage = null"></button>
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(successMessage))
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success:</strong> @successMessage
+            <button type="button" class="btn-close" @onclick="() => successMessage = null"></button>
+        </div>
+    }
+
+    @if (validationErrors.Any())
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Validation Errors:</strong>
+            <ul class="mb-0">
+                @foreach (var error in validationErrors)
+                {
+                    <li>@error.PropertyName: @error.ErrorMessage</li>
+                }
+            </ul>
+            <button type="button" class="btn-close" @onclick="ClearValidationErrors"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-info-circle"></i> Basic Information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="tournamentName" class="form-label">Tournament Name</label>
+                        <input type="text" class="form-control" id="tournamentName" @bind="tournamentName" placeholder="e.g., Summer Soccer Tournament 2026" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-people-fill"></i> Teams</h5>
+                </div>
+                <div class="card-body">
+                    @foreach (var team in teams)
+                    {
+                        <div class="row mb-2">
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" @bind="team.Name" placeholder="Team name" />
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" @bind="team.Seed" placeholder="Seed (optional)" />
+                            </div>
+                            <div class="col-md-1">
+                                <button class="btn btn-danger btn-sm" @onclick="() => RemoveTeam(team)">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    }
+                    <button class="btn btn-success btn-sm" @onclick="AddTeam">
+                        <i class="bi bi-plus-circle"></i> Add Team
+                    </button>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-geo-alt-fill"></i> Fields</h5>
+                </div>
+                <div class="card-body">
+                    @foreach (var field in fields)
+                    {
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" @bind="field.Name" placeholder="Field name" />
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button class="btn btn-danger btn-sm" @onclick="() => RemoveField(field)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <label class="form-label fw-bold">Availability Windows</label>
+                                @foreach (var window in field.AvailabilityWindows)
+                                {
+                                    <div class="row mb-2">
+                                        <div class="col-md-5">
+                                            <input type="datetime-local" class="form-control" @bind="window.Start" />
+                                        </div>
+                                        <div class="col-md-5">
+                                            <input type="datetime-local" class="form-control" @bind="window.End" />
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button class="btn btn-danger btn-sm" @onclick="() => RemoveTimeWindow(field, window)">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+                                <button class="btn btn-success btn-sm" @onclick="() => AddTimeWindow(field)">
+                                    <i class="bi bi-plus-circle"></i> Add Time Window
+                                </button>
+                            </div>
+                        </div>
+                    }
+                    <button class="btn btn-success btn-sm" @onclick="AddField">
+                        <i class="bi bi-plus-circle"></i> Add Field
+                    </button>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-diagram-3"></i> Tournament Format</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="formatType" class="form-label">Format Type</label>
+                        <select class="form-select" id="formatType" @bind="formatType">
+                            <option value="RoundRobin">Round Robin</option>
+                            <option value="Groups">Group Stage</option>
+                            <option value="Knockout">Knockout</option>
+                        </select>
+                    </div>
+
+                    @if (formatType == "Groups")
+                    {
+                        <div class="mb-3">
+                            <label for="numberOfGroups" class="form-label">Number of Groups</label>
+                            <input type="number" class="form-control" id="numberOfGroups" @bind="numberOfGroups" min="2" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="teamsAdvancingPerGroup" class="form-label">Teams Advancing Per Group</label>
+                            <input type="number" class="form-control" id="teamsAdvancingPerGroup" @bind="teamsAdvancingPerGroup" min="1" />
+                        </div>
+                    }
+
+                    @if (formatType == "Knockout")
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="includeThirdPlace" @bind="includeThirdPlaceMatch" />
+                            <label class="form-check-label" for="includeThirdPlace">
+                                Include Third Place Match
+                            </label>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-clock"></i> Scheduling Rules</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="matchDuration" class="form-label">Match Duration (minutes)</label>
+                            <input type="number" class="form-control" id="matchDuration" @bind="matchDurationMinutes" min="1" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="bufferTime" class="form-label">Buffer Between Matches (minutes)</label>
+                            <input type="number" class="form-control" id="bufferTime" @bind="bufferBetweenMatchesMinutes" min="0" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="restTime" class="form-label">Minimum Rest Time (minutes)</label>
+                            <input type="number" class="form-control" id="restTime" @bind="minimumRestTimeMinutes" min="0" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="maxMatches" class="form-label">Max Matches Per Team Per Day</label>
+                            <input type="number" class="form-control" id="maxMatches" @bind="maxMatchesPerTeamPerDay" min="1" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="opponentSpacing" class="form-label">Minimum Opponent Spacing (minutes)</label>
+                        <input type="number" class="form-control" id="opponentSpacing" @bind="minimumOpponentSpacingMinutes" min="0" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-sliders"></i> Constraint Weights (Optimization)</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted small">Higher weights prioritize that constraint. Set to 0 to disable.</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="balancedKickoff" class="form-label">Balanced Kickoff Times</label>
+                            <input type="number" class="form-control" id="balancedKickoff" @bind="balancedKickoffTimesWeight" min="0" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="minimizeFieldChanges" class="form-label">Minimize Field Changes</label>
+                            <input type="number" class="form-control" id="minimizeFieldChanges" @bind="minimizeFieldChangesWeight" min="0" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="opponentSpacingWeight" class="form-label">Opponent Spacing</label>
+                            <input type="number" class="form-control" id="opponentSpacingWeight" @bind="opponentSpacingWeight" min="0" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="seededTeamSeparation" class="form-label">Seeded Team Separation</label>
+                            <input type="number" class="form-control" id="seededTeamSeparation" @bind="seededTeamSeparationWeight" min="0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-4 sticky-top" style="top: 20px;">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0"><i class="bi bi-gear"></i> Actions</h5>
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-primary w-100 mb-2" @onclick="GenerateSchedule" disabled="@isGenerating">
+                        @if (isGenerating)
+                        {
+                            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                            <span>Generating...</span>
+                        }
+                        else
+                        {
+                            <i class="bi bi-lightning-charge"></i>
+                            <span> Generate Schedule</span>
+                        }
+                    </button>
+                    
+                    <button class="btn btn-outline-primary w-100 mb-2" @onclick="ValidateConfiguration">
+                        <i class="bi bi-check-circle"></i> Validate Configuration
+                    </button>
+
+                    <hr />
+
+                    <button class="btn btn-outline-secondary w-100 mb-2" @onclick="ExportConfiguration">
+                        <i class="bi bi-download"></i> Export Configuration (JSON)
+                    </button>
+
+                    <div class="mb-2">
+                        <label for="importFile" class="btn btn-outline-secondary w-100">
+                            <i class="bi bi-upload"></i> Import Configuration (JSON)
+                        </label>
+                        <InputFile id="importFile" OnChange="ImportConfiguration" class="d-none" accept=".json" />
+                    </div>
+
+                    <hr />
+
+                    <button class="btn btn-outline-danger w-100" @onclick="ResetConfiguration">
+                        <i class="bi bi-arrow-counterclockwise"></i> Reset to Defaults
+                    </button>
+                </div>
+            </div>
+
+            @if (generatedSchedule != null)
+            {
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="bi bi-calendar-check"></i> Generated Schedule</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Tournament:</strong> @generatedSchedule.TournamentName</p>
+                        <p><strong>Total Matches:</strong> @generatedSchedule.Matches.Count</p>
+                        <p><strong>Valid:</strong> <span class="badge @(generatedSchedule.Diagnostics.IsValid ? "bg-success" : "bg-danger")">@(generatedSchedule.Diagnostics.IsValid ? "Valid" : "Invalid")</span></p>
+                        
+                        @if (generatedSchedule.Diagnostics.HardConstraintViolations > 0)
+                        {
+                            <p class="text-danger"><strong>Hard Constraint Violations:</strong> @generatedSchedule.Diagnostics.HardConstraintViolations</p>
+                        }
+                        
+                        <button class="btn btn-success w-100 mt-2" @onclick="DownloadSchedule">
+                            <i class="bi bi-download"></i> Download Schedule (JSON)
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    @if (generatedSchedule != null)
+    {
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0"><i class="bi bi-list-check"></i> Schedule Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Match #</th>
+                                        <th>Home Team</th>
+                                        <th>Away Team</th>
+                                        <th>Field</th>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var match in generatedSchedule.Matches.OrderBy(m => m.StartTime))
+                                    {
+                                        <tr>
+                                            <td>@match.MatchId</td>
+                                            <td>@match.HomeTeam</td>
+                                            <td>@match.AwayTeam</td>
+                                            <td>@match.Field</td>
+                                            <td>@match.StartTime.ToString("g")</td>
+                                            <td>@match.EndTime.ToString("g")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

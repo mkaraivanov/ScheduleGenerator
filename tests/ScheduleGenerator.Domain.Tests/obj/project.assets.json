@@ -998,19 +998,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/martin.karaivanov/.nuget/packages/": {}
+    "/home/runner/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/martin.karaivanov/Projects/ScheduleGenerator/tests/ScheduleGenerator.Domain.Tests/ScheduleGenerator.Domain.Tests.csproj",
+      "projectUniqueName": "/home/runner/work/ScheduleGenerator/ScheduleGenerator/tests/ScheduleGenerator.Domain.Tests/ScheduleGenerator.Domain.Tests.csproj",
       "projectName": "ScheduleGenerator.Domain.Tests",
-      "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/tests/ScheduleGenerator.Domain.Tests/ScheduleGenerator.Domain.Tests.csproj",
-      "packagesPath": "/Users/martin.karaivanov/.nuget/packages/",
-      "outputPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/tests/ScheduleGenerator.Domain.Tests/obj/",
+      "projectPath": "/home/runner/work/ScheduleGenerator/ScheduleGenerator/tests/ScheduleGenerator.Domain.Tests/ScheduleGenerator.Domain.Tests.csproj",
+      "packagesPath": "/home/runner/.nuget/packages/",
+      "outputPath": "/home/runner/work/ScheduleGenerator/ScheduleGenerator/tests/ScheduleGenerator.Domain.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/martin.karaivanov/.nuget/NuGet/NuGet.Config"
+        "/home/runner/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -1022,8 +1022,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj": {
-              "projectPath": "/Users/martin.karaivanov/Projects/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj"
+            "/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj": {
+              "projectPath": "/home/runner/work/ScheduleGenerator/ScheduleGenerator/src/ScheduleGenerator.Domain/ScheduleGenerator.Domain.csproj"
             }
           }
         }
@@ -1038,7 +1038,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -1081,7 +1081,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,91 @@
+﻿@page "/"
+
+<PageTitle>Home - Tournament Schedule Generator</PageTitle>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 mb-4">
+                <i class="bi bi-trophy text-warning"></i>
+                Tournament Schedule Generator
+            </h1>
+            <p class="lead text-muted mb-5">
+                Create optimized tournament schedules with constraint-based scheduling using clean architecture principles.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-diagram-3 fs-1 text-primary mb-3"></i>
+                    <h5 class="card-title">Multiple Formats</h5>
+                    <p class="card-text">Support for Round-robin, Group Stage, and Knockout tournaments.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-sliders fs-1 text-success mb-3"></i>
+                    <h5 class="card-title">Flexible Constraints</h5>
+                    <p class="card-text">Hard constraints (must satisfy) and soft constraints (optimize) for scheduling.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-lightning-charge fs-1 text-warning mb-3"></i>
+                    <h5 class="card-title">Smart Scheduling</h5>
+                    <p class="card-text">Backtracking algorithm with CSP heuristics for optimal results.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-geo-alt-fill text-info"></i> Field Management</h5>
+                    <p class="card-text">Configure multiple fields with custom availability windows.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-people-fill text-primary"></i> Team Configuration</h5>
+                    <p class="card-text">Add teams with optional seeding for balanced group assignments.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-clock text-success"></i> Rest Time Management</h5>
+                    <p class="card-text">Ensure teams have adequate rest between matches.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-file-earmark-code text-warning"></i> JSON Import/Export</h5>
+                    <p class="card-text">Save and load configurations for reproducible schedules.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <a href="/tournament-config" class="btn btn-primary btn-lg">
+                <i class="bi bi-gear-fill"></i> Configure Tournament
+            </a>
+        </div>
+    </div>
+</div>
+

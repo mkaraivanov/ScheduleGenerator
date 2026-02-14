@@ -1,10 +1,23 @@
 # Tournament Schedule Generator
 
-A modern .NET 9 console application for constraint-based tournament scheduling using clean architecture principles.
+A modern .NET 9 application for constraint-based tournament scheduling using clean architecture principles.
 
 ## Quick Start
 
-### Option 1: Interactive Wizard (Easy)
+### Option 1: Web Interface (Easiest - NEW!)
+
+```bash
+dotnet run --project src/ScheduleGenerator.Web
+```
+
+Open your browser to `http://localhost:5000` and configure your tournament using the intuitive web interface. Features:
+- Interactive form-based configuration
+- Real-time validation
+- Visual schedule display
+- Import/Export JSON configurations
+- Download generated schedules
+
+### Option 2: Interactive Wizard
 
 ```bash
 dotnet run --project src/ScheduleGenerator.Console
@@ -12,7 +25,7 @@ dotnet run --project src/ScheduleGenerator.Console
 
 Follow the step-by-step prompts to configure your tournament.
 
-### Option 2: JSON Configuration (Fast & Repeatable)
+### Option 3: JSON Configuration (Fast & Repeatable)
 
 ```bash
 dotnet run --project src/ScheduleGenerator.Console -- generate-from-file -c tournament-config.json

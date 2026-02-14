@@ -13,5 +13,8 @@ window.downloadFile = function (filename, base64Content, contentType) {
     link.download = filename;
     link.click();
     
-    window.URL.revokeObjectURL(link.href);
+    // Revoke the object URL after a short delay to ensure download completes
+    setTimeout(() => {
+        window.URL.revokeObjectURL(link.href);
+    }, 100);
 };

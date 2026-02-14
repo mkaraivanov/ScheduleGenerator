@@ -32,11 +32,7 @@ public partial class TournamentConfig
             Name = "Main Field",
             AvailabilityWindows = new List<TimeWindowModel>
             {
-                new TimeWindowModel 
-                { 
-                    Start = DateTime.Today.AddDays(1).AddHours(9),
-                    End = DateTime.Today.AddDays(1).AddHours(17)
-                }
+                CreateDefaultTimeWindow()
             }
         }
     };
@@ -84,11 +80,7 @@ public partial class TournamentConfig
             Name = $"Field {fields.Count + 1}",
             AvailabilityWindows = new List<TimeWindowModel>
             {
-                new TimeWindowModel 
-                { 
-                    Start = DateTime.Today.AddDays(1).AddHours(9),
-                    End = DateTime.Today.AddDays(1).AddHours(17)
-                }
+                CreateDefaultTimeWindow()
             }
         });
     }
@@ -100,11 +92,7 @@ public partial class TournamentConfig
 
     private void AddTimeWindow(FieldModel field)
     {
-        field.AvailabilityWindows.Add(new TimeWindowModel 
-        { 
-            Start = DateTime.Today.AddDays(1).AddHours(9),
-            End = DateTime.Today.AddDays(1).AddHours(17)
-        });
+        field.AvailabilityWindows.Add(CreateDefaultTimeWindow());
     }
 
     private void RemoveTimeWindow(FieldModel field, TimeWindowModel window)
@@ -398,11 +386,7 @@ public partial class TournamentConfig
                 Name = "Main Field",
                 AvailabilityWindows = new List<TimeWindowModel>
                 {
-                    new TimeWindowModel 
-                    { 
-                        Start = DateTime.Today.AddDays(1).AddHours(9),
-                        End = DateTime.Today.AddDays(1).AddHours(17)
-                    }
+                    CreateDefaultTimeWindow()
                 }
             }
         };
@@ -447,5 +431,15 @@ public partial class TournamentConfig
     {
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
+    }
+
+    // Helper method for creating default time windows
+    private static TimeWindowModel CreateDefaultTimeWindow()
+    {
+        return new TimeWindowModel
+        {
+            Start = DateTime.Today.AddDays(1).AddHours(9),
+            End = DateTime.Today.AddDays(1).AddHours(17)
+        };
     }
 }
